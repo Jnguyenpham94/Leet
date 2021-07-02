@@ -1,27 +1,27 @@
 public class arrayLeet{
-    
+
+    //{1,1,0,1,1,1} == 3
     public int findMaxConsecutiveOnes(int[] nums) {
         // Hint: Initialise and declare a variable here to 
         // keep track of how many 1's you've seen in a row.
         int count = 0;
-        int [] size = new int[5];
-        int j = 0;
-        for (int i = 0; i < nums.length; i++) {
+        int max = 0;
+        for (int k : nums) {
             // Do something with element nums[i].
-            if(nums[i] == 1){
+            if(k == 1){
                 count++;
             }
-            else if(nums[i] == 0){
-                size[j] = count;
-                j++;
+            else{
+                if(count >= max){
+                    max = count;
+                    count = 0;
+                }
             }
         }
-        int max = 0;
-        for(int temp : size){
-            if(temp >= max){
-                max = temp;
-            }
+        if(count >= max){
+            max = count;
         }
+        System.out.println(max);
         return max;
     }
 }
