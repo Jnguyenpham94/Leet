@@ -1,4 +1,5 @@
-
+public class arrayLeet{
+    
     public int findMaxConsecutiveOnes(int[] nums) {
         // Hint: Initialise and declare a variable here to 
         // keep track of how many 1's you've seen in a row.
@@ -23,3 +24,5 @@
         }
         return max;
     }
+}
+
