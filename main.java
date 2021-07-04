@@ -5,7 +5,7 @@ public static void main(String[] args) {
     arrayLeet test = new arrayLeet();
     test.findMaxConsecutiveOnes(array);
     twoSum test2 = new twoSum();
-    int [] nums = {3,2,4};
+    int [] nums = {2,7,11,15};
     int target = 6;
     System.out.println("SumTwo: ");
     test2.sumTwo(nums, target);
