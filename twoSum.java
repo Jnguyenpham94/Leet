@@ -7,24 +7,18 @@ public class twoSum {
 
         if(sum != target){
             for(int i = 0; i < nums.length - 1;i++){
+                index[0] = i;
                 for(int k = 1; k< nums.length - 1;k++){
-                    if(sum != target){
-                        index[0] = i;
+                    if(sum != target){    
                         index[1] = k; 
                         sum = nums[i] + nums[k];
                     }
                 }
             }
         }
-        System.out.println(index.toString());
+        System.out.println(index[0]);
+        System.out.println(index[1]);
         return index;
 }
 
-    /*overrides toString for the above 
-    to show the index values in String format [#,#]
-    */
-    @Override
-    public String toString() {
-        return "[" + index[0] + ", " + index[1] + "]";
-    }
 }

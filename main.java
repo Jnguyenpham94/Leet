@@ -6,7 +6,7 @@ public static void main(String[] args) {
     test.findMaxConsecutiveOnes(array);
     twoSum test2 = new twoSum();
     int [] nums = {3,2,4};
-    int target = 9;
+    int target = 6;
     System.out.println("SumTwo: ");
     test2.sumTwo(nums, target);
 }
