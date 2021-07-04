@@ -1,18 +1,18 @@
 public class twoSum {
 
-    int [] index = {0,0};
-    
+    //{3,2,4}
     public int[] sumTwo(int[] nums, int target) {
         int sum = 0;
-
+        int [] index = {0,0};
         if(sum != target){
-            for(int i = 0; i < nums.length - 1;i++){
+            for(int i = 0; i < nums.length;i++){
+                if(sum != target){
                 index[0] = i;
-                for(int k = 1; k< nums.length - 1;k++){
-                    if(sum != target){    
-                        index[1] = k; 
-                        sum = nums[i] + nums[k];
+                for(int k = i+1; k< nums.length;k++){
+                    index[1] = k; 
+                    sum = nums[i] + nums[k];
                     }
+                    
                 }
             }
         }
