@@ -11,9 +11,10 @@ public static void main(String[] args) {
     System.out.println("SumTwo: ");
     //test2.sumTwo(nums, target);
 
+    System.out.println("find Even numbers: ");
     findNumbers test3 = new findNumbers();
     int [] array2 = {12,345,2,6,7896};
-    test3.findNumbers(array2);
+    test3.findEvenNumbers(array2);
 }
 
 }
