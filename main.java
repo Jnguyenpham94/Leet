@@ -19,7 +19,7 @@ public static void main(String[] args) {
     sortedSquares test4 = new sortedSquares();
     System.out.println("find sorted squares: ");
     int [] array3 = {-4,-1,0,3,10};
-    test4.sortedSquareArray(array3);
+    //test4.sortedSquareArray(array3);
 }
 
 }
