@@ -3,11 +3,9 @@ public class findNumbers {
     public int findEvenNumbers(int[] nums) {
         int count = 0;
         int digit = 0;
-        int temp = 0;
         for(int i = 0; i < nums.length;i++){
-            temp = nums[i];
-            while(temp >= 1){
-                temp = temp/10;
+            while(nums[i] >= 1){
+                nums[i] = nums[i]/10;
                 digit++;
             }
             if(digit % 2 == 0){
