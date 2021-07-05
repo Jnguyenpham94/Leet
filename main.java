@@ -14,7 +14,12 @@ public static void main(String[] args) {
     System.out.println("find Even numbers: ");
     findNumbers test3 = new findNumbers();
     int [] array2 = {12,345,2,6,7896};
-    test3.findEvenNumbers(array2);
+    //test3.findEvenNumbers(array2);
+
+    sortedSquares test4 = new sortedSquares();
+    System.out.println("find sorted squares: ");
+    int [] array3 = {-4,-1,0,3,10};
+    test4.sortedSquareArray(array3);
 }
 
 }
