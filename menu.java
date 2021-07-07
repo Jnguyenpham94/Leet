@@ -7,6 +7,7 @@ public class menu {
         System.out.println("2. Two Sum");
         System.out.println("3. Find even numbers");
         System.out.println("4. Find sorted squares");
+        System.out.println("5. Duplicate zeros");
     }
     
     public void mainMenu(){
@@ -38,6 +39,8 @@ public class menu {
             int [] array3 = {-4,-1,0,3,10};
             test4.sortedSquareArray(array3);
             break;
+            case 5:
+            
             default:
             in.close();
         }
