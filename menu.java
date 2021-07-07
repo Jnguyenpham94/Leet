@@ -40,7 +40,9 @@ public class menu {
             test4.sortedSquareArray(array3);
             break;
             case 5:
-            
+            duplicateZeroes test5 = new duplicateZeroes();
+            int [] arr4 = {1,0,2,3,0,4,5,0};
+            test5.duplicateZeros(arr4);
             default:
             in.close();
         }
