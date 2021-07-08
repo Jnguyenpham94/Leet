@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class menu {
 
     public void menuChoices(){
+        System.out.println("0. EXIT.");
         System.out.println("1. find Max Consecutive.");
         System.out.println("2. Two Sum");
         System.out.println("3. Find even numbers");
@@ -43,6 +44,8 @@ public class menu {
             duplicateZeroes test5 = new duplicateZeroes();
             int [] arr4 = {1,0,2,3,0,4,5,0};
             test5.duplicateZeros(arr4);
+            case 0:
+            System.exit(0);
             default:
             in.close();
         }
