@@ -1,15 +1,16 @@
 public class duplicateZeroes {
     
-    //{1,0,2,3,0,4,5,0}
-    //EXPECTED:{1,0,0,2,3,0,0,4}
+    //copy:{1,0,2,3,0,4,5,0}
+    //EXPECTED arr:{1,0,0,2,3,0,0,4}
     public void duplicateZeros(int[] arr) {
         int [] copy = arr.clone();
-        for(int i = 0; i < arr.length;i++){
+        for(int i = 0; i < arr.length-1;i++){
             if(arr[i] == 0){
                 arr[i+1] = 0;
-                if(i != arr.length){
-                    System.arraycopy(copy, copy[i+1], arr, arr[i+1], arr.length);
+                for(int j = i+1; j < arr.length-1;j++){
+                    arr[j+1] = copy[j];
                 }
+                i++;
             }
         }
         arrayPrint(arr);
@@ -17,7 +18,7 @@ public class duplicateZeroes {
 
     public void arrayPrint(int [] arr){
         for (int i : arr) {
-            System.out.println(i);
+            System.out.print(i + ", ");
         }
 }
 }
