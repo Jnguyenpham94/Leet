@@ -8,6 +8,7 @@ public class menu {
         System.out.println("3. Find even numbers");
         System.out.println("4. Find sorted squares");
         System.out.println("5. Duplicate zeros");
+        System.out.println("6. Merge and sort 2 arrays");
     }
     
     public void mainMenu(){
@@ -43,6 +44,13 @@ public class menu {
             duplicateZeroes test5 = new duplicateZeroes();
             int [] arr4 = {1,0,2,3,0,4,5,0};
             test5.duplicateZeros(arr4);
+            case 6:
+            Merge test6 = new Merge();
+            int [] merge1 = {1,2,3,0,0,0};
+            int [] merge2 = {2,5,6};
+            int m = 3;
+            int n = 3;
+            test6.merge(merge1, m, merge2, n);
             default:
             in.close();
         }
