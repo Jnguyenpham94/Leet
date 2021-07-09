@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Merge {
     
     /**
@@ -9,8 +11,8 @@ public class Merge {
      * EXPECTED nums1: {1,2,2,3,5,6}
      */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        System.arraycopy(nums2, 0, nums1, m-n, n);
-
+        System.arraycopy(nums2, 0, nums1, nums1.length-n, n);
+        Arrays.sort(nums1);
         arrayPrint(nums1);
     }
 
