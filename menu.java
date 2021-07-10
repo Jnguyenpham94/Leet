@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * class for the menu options to run in main
+ */
 public class menu {
 
     public void menuChoices(){
@@ -19,7 +22,7 @@ public class menu {
         switch(choice){
             case 1:
             int [] array = {1,1,1,1,0,1,1,1,1,1,};
-            arrayLeet test = new arrayLeet();
+            ConsecutiveOnes test = new ConsecutiveOnes();
             test.findMaxConsecutiveOnes(array);
             break;
             case 2:

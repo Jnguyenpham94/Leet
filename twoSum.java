@@ -1,5 +1,11 @@
 public class twoSum {
 
+    /**
+     * 
+     * @param nums array of elements
+     * @param target value to be add the 2 values to
+     * @return 
+     */
     // {3,2,4}
     public int[] sumTwo(int[] nums, int target) {
         int[] index = new int[2];

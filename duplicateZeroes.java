@@ -1,5 +1,8 @@
 public class duplicateZeroes {
-    
+    /**
+     * 
+     * @param arr array of elements
+     */
     //copy:{1,0,2,3,0,4,5,0}
     //EXPECTED arr:{1,0,0,2,3,0,0,4}
     public void duplicateZeros(int[] arr) {

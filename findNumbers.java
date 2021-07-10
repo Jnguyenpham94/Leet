@@ -1,5 +1,9 @@
 public class findNumbers {
-    
+    /**
+     * 
+     * @param nums array of elements
+     * @return the number of elemenents that have even number of digits
+     */
     public int findEvenNumbers(int[] nums) {
         int count = 0;
         int digit = 0;
