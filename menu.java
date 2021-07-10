@@ -9,6 +9,7 @@ public class menu {
         System.out.println("4. Find sorted squares");
         System.out.println("5. Duplicate zeros");
         System.out.println("6. Merge and sort 2 arrays");
+        System.out.println("7. Remove chosen value from array");
     }
     
     public void mainMenu(){
@@ -51,6 +52,11 @@ public class menu {
             int m = 3;
             int n = 3;
             test6.merge(merge1, m, merge2, n);
+            case 7:
+            RemoveElement test7 = new RemoveElement();
+            int [] nums2 = {0,1,2,2,3,0,4,2};
+            int val = 3;
+            test7.removeElement(nums2, val);
             default:
             in.close();
         }
