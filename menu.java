@@ -13,6 +13,7 @@ public class menu {
         System.out.println("5. Duplicate zeros");
         System.out.println("6. Merge and sort 2 arrays");
         System.out.println("7. Remove chosen value from array");
+        System.out.println("8. Remove dups from array");
     }
     
     public void mainMenu(){
@@ -60,6 +61,10 @@ public class menu {
             int [] nums2 = {0,1,2,2,3,0,4,2};
             int val = 3;
             test7.removeElement(nums2, val);
+            case 8:
+            RemoveDuplicates test8 = new RemoveDuplicates();
+            int [] nums3 = {0,0,1,1,1,2,2,3,3,4};
+            test8.removeDuplicates(nums3);
             default:
             in.close();
         }
