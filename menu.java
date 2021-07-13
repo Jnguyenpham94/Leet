@@ -14,6 +14,7 @@ public class menu {
         System.out.println("6. Merge and sort 2 arrays");
         System.out.println("7. Remove chosen value from array");
         System.out.println("8. Remove dups from array");
+        System.out.println("9. Check if double exists");
     }
     
     public void mainMenu(){
@@ -65,6 +66,10 @@ public class menu {
             RemoveDuplicates test8 = new RemoveDuplicates();
             int [] nums3 = {0,0,1,1,1,2,2,3,3,4};
             test8.removeDuplicates(nums3);
+            case 9:
+            CheckDouble test9 = new CheckDouble();
+            int [] num4 = {10,2,5,3};
+            test9.checkIfExist(num4);
             default:
             in.close();
         }
