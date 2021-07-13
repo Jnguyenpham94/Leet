@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class CheckDouble {
     /**
      * 
@@ -5,6 +7,11 @@ public class CheckDouble {
      * @return true if a double of a value exists false other
      */
     public boolean checkIfExist(int[] arr) {
+        if(arr == null || arr.length == 0){
+            return false;
+        }
+        Arrays.sort(arr);
+        
         return true;
     }
 }
