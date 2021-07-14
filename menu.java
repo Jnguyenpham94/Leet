@@ -68,7 +68,7 @@ public class menu {
             test8.removeDuplicates(nums3);
             case 9:
             CheckDouble test9 = new CheckDouble();
-            int [] num4 = {10,2,5,3};
+            int [] num4 = {-10,12,-20,-8,15};
             test9.checkIfExist(num4);
             default:
             in.close();
