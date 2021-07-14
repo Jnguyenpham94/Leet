@@ -7,6 +7,7 @@ public class CheckDouble {
      * @return true if a double of a value exists false other
      */
     public boolean checkIfExist(int[] arr) {
+        //TODO: negative value did not work -->[-10,12,-20,-8,15]
         if(arr == null || arr.length == 0){
             return false;
         }
