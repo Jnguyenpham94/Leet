@@ -14,14 +14,10 @@ public class CheckDouble {
         Arrays.sort(arr);//{-20,-10,,-8,12,15}
         for(int i = 0; i < arr.length -1;i++){
             int m = arr[i] * 2;
-            if(arr[i] < 0){//accounts for negative values
-                for(int j = arr.length -i; j >= 0; j--){
-                    m = arr[j]/2;
-                }
-            }
+            int n = arr[i]/2;
             System.out.println(arr[i]);
             for(int k = i+1; k < arr.length; k++){
-                if(m == arr[k]){
+                if(m == arr[k] || n == arr[k]){
                     return true;
                 }
             }
