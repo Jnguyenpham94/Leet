@@ -16,11 +16,16 @@ public class CheckDouble {
             int m = arr[i] * 2;
             int n = arr[i]/2;
             for(int k = i+1; k < arr.length; k++){
-                if(m == arr[k] || n == arr[k]){
-                    return true;
+                if(n % 2 == 0){
+                    if(m == arr[k] || n == arr[k]){
+                        System.out.println("TRUE");
+                        System.out.println(i);
+                        return true;
+                    }
                 }
             }
         }
+        System.out.println("FALSE");
         return false;
     }
 }
