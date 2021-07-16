@@ -1,3 +1,5 @@
+import java.util.HashSet;
+import java.util.Set;
 
 public class CheckDouble {
     /**
@@ -10,14 +12,13 @@ public class CheckDouble {
         if (arr == null || arr.length == 0) {
             return false;
         }
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] == arr[j]*2 || arr[i] == arr[j]/2) {
-                    System.out.println("TRUE");
-                    System.out.println(i);
-                    return true;
-                }
+        Set<Integer> array = new HashSet<Integer>();
+        for (int i : arr) {
+            if(array.contains(2 * i) || i % 2 == 0 && array.contains(i/2)){
+                System.out.println("TRUE");
+                return true;
             }
+            array.add(i);
         }
         System.out.println("FALSE");
         return false;
