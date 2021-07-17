@@ -1,5 +1,9 @@
 public class ValidMoutainArray {
-    
+    /**
+     * 
+     * @param nums array of elements to check
+     * @return 
+     */
     public boolean validMountainArray(int[] nums) {
         int N = nums.length;
         int i = 0;
