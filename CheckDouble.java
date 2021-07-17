@@ -8,7 +8,6 @@ public class CheckDouble {
      * @return true if a double of a value exists false other
      */
     public boolean checkIfExist(int[] arr) {
-        // TODO: {1 3 7 11} should be true
         if (arr == null || arr.length == 0) {
             return false;
         }
