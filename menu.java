@@ -70,6 +70,10 @@ public class menu {
             CheckDouble test9 = new CheckDouble();
             int [] num4 = {3,1,7,11};
             test9.checkIfExist(num4);
+            case 10:
+            ValidMoutainArray test10 = new ValidMoutainArray();
+            int [] num5 = {0,3,2,1};
+            test10.validMountainArray(num5);
             default:
             in.close();
         }
