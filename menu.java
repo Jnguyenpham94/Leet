@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class menu {
 
-    public void menuChoices(){
+    public void menuChoices1(){
         System.out.println("1. find Max Consecutive.");
         System.out.println("2. Two Sum");
         System.out.println("3. Find even numbers");
@@ -15,11 +15,17 @@ public class menu {
         System.out.println("7. Remove chosen value from array");
         System.out.println("8. Remove dups from array");
         System.out.println("9. Check if double exists");
+        System.out.println("10. Valid mountain array");
+        System.out.println("11. Next Page");
+    }
+
+    public void menuChoices2() {
+        System.out.println("1. Replace Element");
     }
     
     public void mainMenu(){
         Scanner in = new Scanner(System.in);
-        menuChoices();
+        menuChoices1();
         int choice = in.nextInt();
         switch(choice){
             case 1:
@@ -74,9 +80,27 @@ public class menu {
             ValidMoutainArray test10 = new ValidMoutainArray();
             int [] num5 = {0,3,2,1};
             test10.validMountainArray(num5);
+            case 11:
+            mainMenu2();
             default:
             in.close();
+            break;
         }
+    }
 
+    public void mainMenu2(){
+        Scanner in = new Scanner(System.in);
+        menuChoices2();
+        int choice = in.nextInt();
+        switch (choice) {
+            case 1:
+                ReplaceElement test1 = new ReplaceElement();
+                int [] arr = {17,18,5,4,6,1};
+                test1.replaceElements(arr);
+                break;
+            default:
+                in.close();
+                break;
+        }
     }
 }
