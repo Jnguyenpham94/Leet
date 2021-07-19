@@ -15,6 +15,13 @@ public class ReplaceElement {
             arr[0] = -1;
             return arr;
         }
+        int greatest = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int current = arr[i];
+            for(int j = i + 1; j < arr.length; j++){
+                
+            }
+        }
         return arr;
         
     }
