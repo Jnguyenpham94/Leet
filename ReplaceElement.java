@@ -8,6 +8,13 @@ public class ReplaceElement {
      * and replace the last element with -1.
      */
     public int[] replaceElements(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return arr;
+        }
+        if(arr.length == 1){
+            arr[0] = -1;
+            return arr;
+        }
         return arr;
         
     }
