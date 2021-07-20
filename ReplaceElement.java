@@ -19,10 +19,9 @@ public class ReplaceElement {
         }
         int greatest = 0;
         for (int i = 0; i < arr.length; i++) {
-            int current = arr[i];
-            greatest = current;
+            greatest = 0;
             for(int j = i + 1; j < arr.length; j++){
-                if(arr[j] > greatest){
+                if(greatest < arr[j]){
                     greatest = arr[j];
                 }
             }
