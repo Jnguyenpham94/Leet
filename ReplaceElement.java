@@ -22,7 +22,7 @@ public class ReplaceElement {
             int current = arr[i];
             greatest = current;
             for(int j = i + 1; j < arr.length; j++){
-                if(arr[j] > current){
+                if(arr[j] > greatest){
                     greatest = arr[j];
                 }
             }
