@@ -32,9 +32,9 @@ public class ReplaceElement {
             arr[arr.length-1] = -1;
         }
 
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
+        //print for testing purposes
+        PrintStuff p = new PrintStuff();
+        p.printArray(arr);
         return arr;
         
     }
