@@ -21,6 +21,7 @@ public class menu {
 
     public void menuChoices2() {
         System.out.println("1. Replace Element");
+        System.out.println("2. Move Zeroes");
     }
     
     public void mainMenu(){
@@ -98,6 +99,10 @@ public class menu {
                 int [] arr = {17,18,5,4,6,1};
                 test1.replaceElements(arr);
                 break;
+            case 2:
+                MoveZeroes test2 = new MoveZeroes();
+                int [] nums = {0,1,0,3,12};
+                test2.moveZeroes(nums);
             default:
                 in.close();
                 break;
