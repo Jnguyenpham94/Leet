@@ -24,6 +24,7 @@ public class menu {
         System.out.println("0. EXIT");
         System.out.println("1. Replace Element");
         System.out.println("2. Move Zeroes");
+        System.out.println("3. Sort by Parity");
     }
 
     public void mainMenu() {
@@ -113,6 +114,10 @@ public class menu {
                 MoveZeroes test2 = new MoveZeroes();
                 int[] nums = { 0, 1, 0, 3, 12 };
                 test2.moveZeroes(nums);
+            case 3:
+                SortArrayParity test3 = new SortArrayParity();
+                int [] nums2 = {3,1,2,4};
+                test3.sortArrayByParity(nums2);
             default:
                 in.close();
                 break;
