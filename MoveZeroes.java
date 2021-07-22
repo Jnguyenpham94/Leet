@@ -7,6 +7,11 @@ public class MoveZeroes {
      * expected : 1,3,12,0,0
      */
     public void moveZeroes(int[] nums) {
+        for (int i : nums) {
+            if(i == 0){
+                
+            }
+        }
         
     }
 }
