@@ -21,10 +21,10 @@ public class SortArrayParity {
         }
         //load in the values
         int current = ev; //stores location where even values ends
-        for(int j = ev; j >= 0; j--){
+        for(int j = 0; evens[j] != 0; j++){
             nums[j] = evens[j];
         }
-        for(int k = current; k < nums.length; k++){
+        for(int k = current; current > 0; k++){
             nums[k] = odds[--current];
         }
         PrintStuff pr = new PrintStuff();
