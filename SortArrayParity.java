@@ -20,9 +20,15 @@ public class SortArrayParity {
             }
         }
         //load in the values
-        for(int j = ev; j ; j--){
+        int current = ev; //stores location where even values ends
+        for(int j = ev; j >= 0; j--){
             nums[j] = evens[j];
         }
+        for(int k = current; k < nums.length; k++){
+            nums[k] = odds[--current];
+        }
+        PrintStuff pr = new PrintStuff();
+        pr.printArray(nums);
         return nums;
     }
 }
