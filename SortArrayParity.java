@@ -18,9 +18,8 @@ public class SortArrayParity {
             }
         }
         //load in the values
-        //stores location where even values ends
-        int endOdd = nums.length - 1;
-        int even = 0;
+        int endOdd = nums.length - 1;//stores location of end for odd values
+        int even = 0;//stores location where even values begins
         for(int j = 0; j < nums2.length ; j++){
             if(nums2[j] % 2 == 0){
                 nums[even++] = nums2[j];
