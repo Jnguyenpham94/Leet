@@ -7,25 +7,27 @@ public class SortArrayParity {
      * EXPECTED : {2, 4, 3, 1}
      */
     public int[] sortArrayByParity(int[] nums) {
-        int [] evens = new int[nums.length]; //contains all even values 
-        int [] odds = new int[nums.length]; //contains all odd values
+        int [] nums2 = new int[nums.length]; //contains all even values 
         int ev = 0;
-        int od = 0;
         for (int i : nums) {
             if(i % 2 == 0){
-                evens[ev++] = i;
+                nums2[ev++] = i;
             }
             else{
-                odds[od++] = i;
+                nums2[ev++] = i;
             }
         }
         //load in the values
-        int current = ev; //stores location where even values ends
-        for(int j = 0; evens[j] != 0; j++){
-            nums[j] = evens[j];
-        }
-        for(int k = current; current > 0; k++){
-            nums[k] = odds[--current];
+        //stores location where even values ends
+        int endOdd = nums.length - 1;
+        int even = 0;
+        for(int j = 0; j < nums2.length ; j++){
+            if(nums2[j] % 2 == 0){
+                nums[even++] = nums2[j];
+            }
+            else{
+                nums[endOdd--] = nums2[j];
+            }
         }
         PrintStuff pr = new PrintStuff();
         pr.printArray(nums);
