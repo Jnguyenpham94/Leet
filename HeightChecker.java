@@ -36,7 +36,9 @@ public class HeightChecker {
     public int thirdMax(int[] nums) {
         int [] thirdMax = new int[3];
         for (int i : nums) {
-            if(i > )
+            if(){
+                
+            }
         }
         return 0;
     }
