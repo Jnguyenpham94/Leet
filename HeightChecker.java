@@ -24,4 +24,14 @@ public class HeightChecker {
         pr.printArray(expected);
         return output;
     }
+
+    /**
+     * 
+     * @param nums array of numbers
+     * @return the third highest value but iff there are 3 max values
+     * @return the max value
+     */
+    public int thirdMax(int[] nums) {
+        return 0;
+    }
 }

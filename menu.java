@@ -123,6 +123,10 @@ public class menu {
                 HeightChecker test4 = new HeightChecker();
                 int [] heights = {1,1,4,2,1,3};
                 test4.heightChecker(heights);
+            case 5:
+                HeightChecker test5 = new HeightChecker();
+                int [] nums3 = {2,2,3,1};
+                test5.thirdMax(nums3);
             default:
                 in.close();
                 break;
