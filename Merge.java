@@ -13,12 +13,7 @@ public class Merge {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         System.arraycopy(nums2, 0, nums1, nums1.length-n, n);
         Arrays.sort(nums1);
-        arrayPrint(nums1);
-    }
-
-    public void arrayPrint(int [] arr){
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
+        PrintStuff pr = new PrintStuff();
+        pr.printArray(nums1);
     }
 }

@@ -30,8 +30,14 @@ public class HeightChecker {
      * @param nums array of numbers
      * @return the third highest value but iff there are 3 max values
      * @return the max value
+     * 2,2,3,1
+     * EXPECTED 1
      */
     public int thirdMax(int[] nums) {
+        int [] thirdMax = new int[3];
+        for (int i : nums) {
+            if(i > )
+        }
         return 0;
     }
 }

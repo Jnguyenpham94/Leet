@@ -19,12 +19,8 @@ public class duplicateZeroes {
                 i++;
             }
         }
-        arrayPrint(arr);
+        PrintStuff pr = new PrintStuff();
+        pr.printArray(arr);
     }
 
-    public void arrayPrint(int [] arr){
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-}
 }
