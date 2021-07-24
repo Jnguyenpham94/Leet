@@ -25,6 +25,7 @@ public class menu {
         System.out.println("1. Replace Element");
         System.out.println("2. Move Zeroes");
         System.out.println("3. Sort by Parity");
+        System.out.println("4. Height Checker");
     }
 
     public void mainMenu() {
@@ -118,6 +119,10 @@ public class menu {
                 SortArrayParity test3 = new SortArrayParity();
                 int [] nums2 = {3,1,2,4};
                 test3.sortArrayByParity(nums2);
+            case 4:
+                HeightChecker test4 = new HeightChecker();
+                int [] heights = {1,1,4,2,1,3};
+                test4.heightChecker(heights);
             default:
                 in.close();
                 break;
