@@ -26,6 +26,7 @@ public class menu {
         System.out.println("2. Move Zeroes");
         System.out.println("3. Sort by Parity");
         System.out.println("4. Height Checker");
+        System.out.println("5. Third max");
     }
 
     public void mainMenu() {
