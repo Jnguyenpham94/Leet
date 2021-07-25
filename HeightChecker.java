@@ -31,29 +31,28 @@ public class HeightChecker {
      * @return the max value if less than 3 max values 2,2,3,1 EXPECTED 1
      */
     public int thirdMax(int[] nums) {
-        Integer max = null; 
+        Integer max = null;
         Integer secondMax = null;
         Integer thirdMax = null;
 
-        for(Integer num : nums){
-            if(num.equals(max) || num.equals(secondMax) || num.equals(thirdMax)){
+        for (Integer num : nums) {
+            if (num.equals(max) || num.equals(secondMax) || num.equals(thirdMax)) {
                 continue;
             }
 
-            if(max == null || num > max){
+            if (max == null || num > max) {
                 thirdMax = secondMax;
                 secondMax = max;
-            }
-            else if(secondMax == null || num > secondMax){
+                max = num;
+            } else if (secondMax == null || num > secondMax) {
                 thirdMax = secondMax;
                 secondMax = num;
-            }
-            else if(thirdMax == null || num > thirdMax){
+            } else if (thirdMax == null || num > thirdMax) {
                 thirdMax = num;
             }
         }
-        
-        if(thirdMax == null){
+
+        if (thirdMax == null) {
             return max;
         }
         return thirdMax;
