@@ -29,17 +29,39 @@ public class HeightChecker {
      * 
      * @param nums array of numbers
      * @return the third highest value but iff there are 3 max values
-     * @return the max value
+     * @return the max value if less than 3 max values
      * 2,2,3,1
      * EXPECTED 1
      */
     public int thirdMax(int[] nums) {
-        int [] thirdMax = new int[3];
-        for (int i : nums) {
-            if(){
-                
+        int first = 0; //greatest
+        int second = 0; //second
+        int third = 0; // third largest values
+        Arrays.sort(nums);
+        if(nums.length < 3){
+            return 0;
+        }
+        first = nums[0];
+        for(int i = 1; i < nums.length; i++) {
+            if(nums[i] > first){
+                first = nums[i];
             }
         }
-        return 0;
+        for(int j = 0; j < nums.length; j++){
+            if(nums[j] > second && nums[j] < first){
+                second = nums[j];
+            }
+        }
+        for(int k = 0; k < nums.length; k++){
+            if(nums[k] > third && nums[k] < second){
+                third = nums[k];
+            }
+        }
+        if(nums.length > 3){
+            return first;
+        }
+        else{
+            return Math.max(first, Math.max(second, third));
+        }
     }
 }
