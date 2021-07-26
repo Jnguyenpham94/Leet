@@ -1,3 +1,4 @@
+package ArrayLeet;
 public class ConsecutiveOnes{
     /**
      * 
