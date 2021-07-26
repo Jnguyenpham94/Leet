@@ -27,6 +27,7 @@ public class menu {
         System.out.println("3. Sort by Parity");
         System.out.println("4. Height Checker");
         System.out.println("5. Third max");
+        System.out.println("6. Find Disappeared Numbers");
     }
 
     public void mainMenu() {
@@ -118,16 +119,20 @@ public class menu {
                 test2.moveZeroes(nums);
             case 3:
                 SortArrayParity test3 = new SortArrayParity();
-                int [] nums2 = {3,1,2,4};
+                int[] nums2 = { 3, 1, 2, 4 };
                 test3.sortArrayByParity(nums2);
             case 4:
                 HeightChecker test4 = new HeightChecker();
-                int [] heights = {1,1,4,2,1,3};
+                int[] heights = { 1, 1, 4, 2, 1, 3 };
                 test4.heightChecker(heights);
             case 5:
                 HeightChecker test5 = new HeightChecker();
-                int [] nums3 = {2,2,3,1};
+                int[] nums3 = { 2, 2, 3, 1 };
                 test5.thirdMax(nums3);
+            case 6:
+                HeightChecker test6 = new HeightChecker();
+                int[] nums4 = { 4, 3, 2, 7, 8, 2, 3, 1 };
+                test6.findDisappearedNumbers(nums4);
             default:
                 in.close();
                 break;

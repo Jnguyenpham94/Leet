@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.List;
 
 public class HeightChecker {
 
@@ -56,5 +57,9 @@ public class HeightChecker {
             return max;
         }
         return thirdMax;
+    }
+
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        return null;
     }
 }
