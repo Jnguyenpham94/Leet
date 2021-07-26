@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -59,7 +60,21 @@ public class HeightChecker {
         return thirdMax;
     }
 
+    /**
+     * 
+     * @param nums array of numbers
+     * @return numbers missing from 1 to n in the list
+     * actual : { 4, 3, 2, 7, 8, 2, 3, 1 }
+     * Sorted : { 1, 2, 2, 3, 3, 4, 7, 8 }
+     */
     public List<Integer> findDisappearedNumbers(int[] nums) {
-        return null;
+        List<Integer> a = new ArrayList<Integer>();
+        Arrays.sort(nums);
+        for (int i = 1; i < nums.length; i++) {
+            if(i != nums[i]){
+                a.add(i);
+            }
+        }
+        return a;
     }
 }
