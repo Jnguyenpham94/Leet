@@ -1,4 +1,5 @@
 package ArrayLeet;
+
 import java.util.Scanner;
 
 /**
@@ -16,19 +17,19 @@ public class menu {
         System.out.println("6. Merge and sort 2 arrays");
         System.out.println("7. Remove chosen value from array");
         System.out.println("8. Remove dups from array");
-        System.out.println("9. Check if double exists");
-        System.out.println("10. Valid mountain array");
-        System.out.println("11. Next Page");
+        System.out.println("9. Next Page");
     }
 
     public void menuChoices2() {
         System.out.println("0. EXIT");
-        System.out.println("1. Replace Element");
-        System.out.println("2. Move Zeroes");
-        System.out.println("3. Sort by Parity");
-        System.out.println("4. Height Checker");
-        System.out.println("5. Third max");
-        System.out.println("6. Find Disappeared Numbers");
+        System.out.println("1. Check if double exists");
+        System.out.println("2. Valid mountain array");
+        System.out.println("3. Replace Element");
+        System.out.println("4. Move Zeroes");
+        System.out.println("5. Sort by Parity");
+        System.out.println("6. Height Checker");
+        System.out.println("7. Third max");
+        System.out.println("8. Find Disappeared Numbers");
     }
 
     public void mainMenu() {
@@ -85,14 +86,6 @@ public class menu {
                 int[] nums3 = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
                 test8.removeDuplicates(nums3);
             case 9:
-                CheckDouble test9 = new CheckDouble();
-                int[] num4 = { 3, 1, 7, 11 };
-                test9.checkIfExist(num4);
-            case 10:
-                ValidMoutainArray test10 = new ValidMoutainArray();
-                int[] num5 = { 0, 3, 2, 1 };
-                test10.validMountainArray(num5);
-            case 11:
                 mainMenu2();
             default:
                 in.close();
@@ -110,27 +103,35 @@ public class menu {
                 in.close();
                 System.exit(0);
             case 1:
+                CheckDouble test9 = new CheckDouble();
+                int[] num4 = { 3, 1, 7, 11 };
+                test9.checkIfExist(num4);
+            case 2:
+                ValidMoutainArray test10 = new ValidMoutainArray();
+                int[] num5 = { 0, 3, 2, 1 };
+                test10.validMountainArray(num5);
+            case 3:
                 ReplaceElement test1 = new ReplaceElement();
                 int[] arr = { 17, 18, 5, 4, 6, 1 };
                 test1.replaceElements(arr);
                 break;
-            case 2:
+            case 4:
                 MoveZeroes test2 = new MoveZeroes();
                 int[] nums = { 0, 1, 0, 3, 12 };
                 test2.moveZeroes(nums);
-            case 3:
+            case 5:
                 SortArrayParity test3 = new SortArrayParity();
                 int[] nums2 = { 3, 1, 2, 4 };
                 test3.sortArrayByParity(nums2);
-            case 4:
+            case 6:
                 HeightChecker test4 = new HeightChecker();
                 int[] heights = { 1, 1, 4, 2, 1, 3 };
                 test4.heightChecker(heights);
-            case 5:
+            case 7:
                 HeightChecker test5 = new HeightChecker();
                 int[] nums3 = { 2, 2, 3, 1 };
                 test5.thirdMax(nums3);
-            case 6:
+            case 8:
                 HeightChecker test6 = new HeightChecker();
                 int[] nums4 = { 4, 3, 2, 7, 8, 2, 3, 1 };
                 test6.findDisappearedNumbers(nums4);
