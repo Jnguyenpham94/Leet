@@ -71,14 +71,8 @@ public class HeightChecker {
      * Missing :{ 5, 6 }
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
-        Arrays.sort(nums);
         int smallest = 1;
-        int largest = 1;
-        for (int i : nums) {
-            if(i > largest){
-                largest = i;
-            }
-        }
+        int largest = nums.length;
         List<Integer> a = IntStream.range(smallest, largest + 1).boxed().collect(Collectors.toList());
         for (int i : nums) {
             if(a.contains(i)){
