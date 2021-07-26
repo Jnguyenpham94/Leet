@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class HeightChecker {
 
@@ -66,15 +68,25 @@ public class HeightChecker {
      * @return numbers missing from 1 to n in the list
      * actual : { 4, 3, 2, 7, 8, 2, 3, 1 }
      * Sorted : { 1, 2, 2, 3, 3, 4, 7, 8 }
+     * Missing :{ 5, 6 }
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
-        List<Integer> a = new ArrayList<Integer>();
         Arrays.sort(nums);
-        for (int i = 1; i < nums.length; i++) {
-            if(i != nums[i]){
-                a.add(i);
+        int smallest = 1;
+        int largest = 1;
+        for (int i : nums) {
+            if(i > largest){
+                largest = i;
             }
         }
+        List<Integer> a = IntStream.range(smallest, largest + 1).boxed().collect(Collectors.toList());
+        for (int i : nums) {
+            if(a.contains(i)){
+                a.remove(Integer.valueOf(i));
+            }
+        }
+        PrintStuff pr = new PrintStuff();
+        pr.printArray(a);
         return a;
     }
 }
