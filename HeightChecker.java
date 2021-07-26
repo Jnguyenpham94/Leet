@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -71,12 +72,14 @@ public class HeightChecker {
      * Missing :{ 5, 6 }
      */
     public List<Integer> findDisappearedNumbers(int[] nums) {
-        int smallest = 1;
-        int largest = nums.length;
-        List<Integer> a = IntStream.range(smallest, largest + 1).boxed().collect(Collectors.toList());
+        List<Integer> a = new ArrayList<>();
+        HashSet<Integer> numsSet = new HashSet<>();
         for (int i : nums) {
-            if(a.contains(i)){
-                a.remove(Integer.valueOf(i));
+            numsSet.add(i);
+        }
+        for(int i = 1; i <= nums.length; i++){
+            if(!numsSet.contains(i)){
+                a.add(i);
             }
         }
         PrintStuff pr = new PrintStuff();
