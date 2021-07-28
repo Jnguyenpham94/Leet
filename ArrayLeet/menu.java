@@ -43,7 +43,7 @@ public class menu {
 
     public void mainMenu() {
         Scanner in = new Scanner(System.in);
-        arrayChoices1();
+        mainMenuChoices();
         int choice = in.nextInt();
         switch (choice) {
             case 0:
@@ -173,7 +173,7 @@ public class menu {
 
     public void recursiveMenu() {
         Scanner in = new Scanner(System.in);
-        arrayChoices1();
+        recursiveMenu();
         int choice = in.nextInt();
         switch (choice) {
             case 0:
