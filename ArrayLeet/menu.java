@@ -2,12 +2,21 @@ package ArrayLeet;
 
 import java.util.Scanner;
 
+import Recursive.ReverseString;
+
+//s = ["h","e","l","l","o"]
 /**
  * class for the menu options to run in main
  */
 public class menu {
 
-    public void menuChoices1() {
+    public void mainMenuChoices() {
+        System.out.println("0. EXIT");
+        System.out.println("1. Array stuff");
+        System.out.println("2. Recursive stuff");
+    }
+
+    public void arrayChoices1() {
         System.out.println("0. EXIT");
         System.out.println("1. find Max Consecutive.");
         System.out.println("2. Two Sum");
@@ -20,7 +29,7 @@ public class menu {
         System.out.println("9. Next Page");
     }
 
-    public void menuChoices2() {
+    public void arrayChoices2() {
         System.out.println("0. EXIT");
         System.out.println("1. Check if double exists");
         System.out.println("2. Valid mountain array");
@@ -34,7 +43,28 @@ public class menu {
 
     public void mainMenu() {
         Scanner in = new Scanner(System.in);
-        menuChoices1();
+        arrayChoices1();
+        int choice = in.nextInt();
+        switch (choice) {
+            case 0:
+                System.out.println("GOODBYE");
+                in.close();
+                System.exit(0);
+            case 1:
+                arrayMenu();
+                break;
+            case 2:
+                recursiveMenu();
+                break;
+            default:
+                in.close();
+                break;
+        }
+    }
+
+    public void arrayMenu() {
+        Scanner in = new Scanner(System.in);
+        arrayChoices1();
         int choice = in.nextInt();
         switch (choice) {
             case 0:
@@ -86,16 +116,16 @@ public class menu {
                 int[] nums3 = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
                 test8.removeDuplicates(nums3);
             case 9:
-                mainMenu2();
+                arrayMenu2();
             default:
                 in.close();
                 break;
         }
     }
 
-    public void mainMenu2() {
+    public void arrayMenu2() {
         Scanner in = new Scanner(System.in);
-        menuChoices2();
+        arrayChoices2();
         int choice = in.nextInt();
         switch (choice) {
             case 0:
@@ -135,6 +165,26 @@ public class menu {
                 HeightChecker test6 = new HeightChecker();
                 int[] nums4 = { 4, 3, 2, 7, 8, 2, 3, 1 };
                 test6.findDisappearedNumbers(nums4);
+            default:
+                in.close();
+                break;
+        }
+    }
+
+    public void recursiveMenu() {
+        Scanner in = new Scanner(System.in);
+        arrayChoices1();
+        int choice = in.nextInt();
+        switch (choice) {
+            case 0:
+                System.out.println("GOODBYE");
+                in.close();
+                System.exit(0);
+            case 1:
+                char[] s = { 'h', 'e', 'l', 'l', 'o' };
+                ReverseString test1 = new ReverseString();
+                test1.reverseString(s);
+                break;
             default:
                 in.close();
                 break;
