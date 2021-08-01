@@ -44,12 +44,18 @@ import java.awt.*;
     }
 
     public void windowOpened(WindowEvent e) {
-            System.out.println("Window is now open");
+            System.out.println("Window is now open ");
     }
     public void windowActivated(WindowEvent e) {}
-    public void windowIconified(WindowEvent e) {}
-    public void windowDeiconified(WindowEvent e) {}
-    public void windowDeactivated(WindowEvent e) {}
+    public void windowIconified(WindowEvent e) {
+        System.out.println("Window is minimized ");
+    }
+    public void windowDeiconified(WindowEvent e) {
+        System.out.println("Window is normal size ");
+    }
+    public void windowDeactivated(WindowEvent e) {
+        System.out.println("Window is not the active window ");
+    }
     public void windowClosed(WindowEvent e) {}
 
 }
