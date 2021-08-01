@@ -26,16 +26,26 @@ import java.awt.*;
     }
 
     public void actionPerformed(ActionEvent e) {
-            numClicks++;
-            text.setText("Button Clicked " + numClicks + " times");
+            //numClicks++;
+            text.setText("Button Clicked " + ++numClicks + " times");
+            if(numClicks % 3 == 0){
+                System.out.print("FIZZ ");
+            }
+            if(numClicks % 5 == 0){
+                System.out.print("BUZZ ");
+            }
+            System.out.print(numClicks + " ");
     }
 
     public void windowClosing(WindowEvent e) {
             dispose();
+            System.out.println("CLOSING GOODBYE!");
             System.exit(0);
     }
 
-    public void windowOpened(WindowEvent e) {}
+    public void windowOpened(WindowEvent e) {
+            System.out.println("Window is now open");
+    }
     public void windowActivated(WindowEvent e) {}
     public void windowIconified(WindowEvent e) {}
     public void windowDeiconified(WindowEvent e) {}
