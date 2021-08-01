@@ -1,6 +1,22 @@
 public class InsertionSort {
     
-    void sort(int arr[])
+
+    public static void main(String[] args) {
+
+        int [] arr = {8,3,6,8,2,1,7,5,12,52,20};
+        sort(arr);
+
+        PrintStuff pr = new PrintStuff();
+        pr.printArray(arr);
+        
+    }
+    
+    /**
+     * 
+     * @param arr array of numbers
+     * sorted in ascending order
+     */
+    public static void sort(int arr[])
     {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
