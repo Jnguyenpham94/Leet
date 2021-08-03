@@ -51,6 +51,7 @@ public class AL extends Frame implements WindowListener, ActionListener {
     }
 
     public void windowActivated(WindowEvent e) {
+        System.out.println("Window is active window ");
     }
 
     public void windowIconified(WindowEvent e) {
