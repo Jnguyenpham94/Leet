@@ -4,18 +4,18 @@ import java.awt.event.*;
 
 import java.awt.*;
 
-public class AL extends Frame implements WindowListener, ActionListener {
+public class ButtonFizzBuzz extends Frame implements WindowListener, ActionListener {
     TextField text = new TextField(20);
     Button b;
     private int numClicks = 0;
 
     public static void main(String[] args) {
-        AL myWindow = new AL("My first window");
+        ButtonFizzBuzz myWindow = new ButtonFizzBuzz("My first window");
         myWindow.setSize(350, 100);
         myWindow.setVisible(true);
     }
 
-    public AL(String title) {
+    public ButtonFizzBuzz(String title) {
 
         super(title);
         setLayout(new FlowLayout());
